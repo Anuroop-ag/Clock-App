@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/time"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="26sp"
+        android:text=""
+        android:fontFamily="sans-serif-condensed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="155dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:text="00:00:00"
+        android:layout_below="@+id/time"
+
+
+         />
+
+
+
+    <ImageView
+        android:id="@+id/iv_start"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/iv_face"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+
+        app:srcCompat="@drawable/play" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/iv_pause"
+        android:src="@drawable/pause"
+        android:layout_below="@id/iv_face"
+        android:layout_toRightOf="@id/iv_start"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_reset"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/reset"
+        android:layout_toRightOf="@+id/iv_pause"
+        android:layout_below="@id/iv_face"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_lap"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/iv_face"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="21dp"
+        app:srcCompat="@drawable/lap"
+        android:layout_toRightOf="@id/iv_reset"
+        />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_face"
+        android:layout_width="310dp"
+        android:layout_height="310dp"
+        android:layout_below="@+id/time"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        app:srcCompat="@drawable/clock" />
+
+    <ImageView
+        android:id="@+id/iv_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignTop="@+id/time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:rotation="-0.0"
+        app:srcCompat="@drawable/second_hand" />
+
+    <ListView
+        android:id="@+id/listview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_face"
+        android:divider="#FFFFFF"
+        android:drawSelectorOnTop="true"
+        android:layout_marginTop="60dp"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="10dip"
+
+        android:scrollbars="vertical"
+        android:transcriptMode="alwaysScroll"
+
+
+        >
+    </ListView>
+</android.widget.RelativeLayout>
